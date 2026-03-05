@@ -37,3 +37,73 @@
 @use "font-awesome/brands";
 @use "font-awesome/solid";
 @use "font-awesome/regular";
+
+/*******************************************************************************
+ * Custom Social Icon Styling (Cleaned Up)
+ ******************************************************************************/
+
+/* 1. Base Sizing and Alignment for all custom icons */
+.navbar-brand.social .gm-icon,
+.navbar-brand.social .gs-icon,
+.navbar-brand.social .gh-icon {
+  font-size: 2.2rem !important; 
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  margin-right: 8px; /* Spacing between icons */
+  transition: opacity 0.2s ease-in-out;
+  display: inline-block !important;
+}
+
+/* 2. Standard Colors (Light Mode) */
+/* Gmail - Green as per your preference */
+.gm-icon::before { color: #ea5035 !important; }
+
+/* Google Scholar - Yellow as per your preference */
+.gs-icon::before { color: #424ef4 !important; }
+
+/* GitHub - Standard Dark */
+.gh-icon::before { color: #25292e !important; }
+
+/* 3. Dark Mode Specific Overrides */
+html[data-theme="dark"] {
+  .gs-icon::before { color: #f88add !important; } /* Pink/Purple */
+  .gh-icon::before { color: #ffffff !important; } /* White for Dark Mode */
+  /* Email stays Green unless you want to change it here */
+}
+
+/* 4. Universal Hover Effect */
+/* Instead of complex gradients, we use opacity for a clean 'fade' on hover */
+.navbar-brand.social a:hover .gm-icon,
+.navbar-brand.social a:hover .gs-icon,
+.navbar-brand.social a:hover .gh-icon {
+  opacity: 0.7;
+  text-decoration: none !important;
+}
+
+/* Clean up any background-clip artifacts from previous attempts */
+.gm-icon, .gs-icon, .gh-icon {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+
+/*******************************************************************************
+ * Profile "More Info" Styling
+ ******************************************************************************/
+
+.profile .more-info {
+  font-family: "Roboto Slab", serif; /* Change to your preferred font */
+  font-size: 0.95rem;                /* Adjust size (e.g., 0.8rem to 1.1rem) */
+  line-height: 1.4;                  /* Adjust spacing between lines */
+  color: var(--global-text-color);   /* Uses theme text color */
+  font-style: normal;                /* Change to 'italic' if desired */
+  text-align: left;                  /* Change to 'justify' or 'right' */
+  margin-top: 15px;                  /* Space between image and text */
+}
+
+/* Optional: Style the paragraph inside more-info specifically */
+.profile .more-info p {
+  margin-bottom: 0.5rem;
+  font-weight: 300;                  /* Light, Regular (400), or Bold (700) */
+}

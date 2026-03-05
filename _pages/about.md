@@ -9,9 +9,10 @@ profile:
   image: profile.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>S1-B1b-42, Block S1, Level B1, School of Electrical and Electronic Engineering, Nanyang Technological University, 50 Nanyang Avenue, Singapore 639798</p>
-    <p>Phone: (65) 6790-6861</p>
-    <p>E-mail: ebhgwee@ntu.edu.sg</p>
+    <a href="https://maps.app.goo.gl/vLWCN2seNfDpCKQu6" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+      <p><i class="fa-solid fa-location-dot"></i> S1-B1b-42, Nanyang Technological University, 50 Nanyang Avenue, Singapore</p>
+    </a>
+
 
 # selected_papers: true # includes a list of papers marked as "selected={true}"
 # social: true # includes social icons at the bottom of the page
